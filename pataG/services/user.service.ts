@@ -10,19 +10,29 @@ import { IRepo } from 'src/app/repos';
   providedIn: 'root'
 })
 export class UserService {
-  private apiKey : string = 'https://api.github.com/users/MugachaGichamba?access_token=' + "bf361e1bd02e948e5b8408283d45856edeea1039";
-  private repos: string = 'https://api.github.com/users/MugachaGichamba/repos?access_token=' + "bf361e1bd02e948e5b8408283d45856edeea1039";
+  private username : string;
+ 
   constructor(private http : HttpClient) { 
     console.log("service ready")
+    this.username = "MugachaGichamba";
+   
   }
+  
 
+  updateUserName(username: string) {
+
+    this.username = username;
+    
+  } 
   getUsers(): Observable<IUser[]>{
-    return this.http.get<IUser[]>(this.apiKey);
+    
+    return this.http.get<IUser[]>('https://api.github.com/users/' + this.username + "?access_token=" + "bf361e1bd02e948e5b8408283d45856edeea1039");
     
   }
   getRepos(): Observable<IRepo[]> {
-    return this.http.get<IRepo[]>(this.repos);
+    return this.http.get<IRepo[]>('https://api.github.com/users/' + this.username + "/repos?access_token=" + "bf361e1bd02e948e5b8408283d45856edeea1039");
     
   }
+
 
 }

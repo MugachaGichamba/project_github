@@ -1,6 +1,6 @@
 <form action="">
     <div class="form-group">
-        <input type="text" name="form-control" placeholder="Search github username">
+        <input type="text" name="form-control" placeholder="Search github username" [(ngModel)]="username" name="username" (keyup)="findRepo()">
     </div>
 </form>
 

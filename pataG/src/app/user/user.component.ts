@@ -10,6 +10,7 @@ export class UserComponent implements OnInit {
  
   public users = [];
   public repos = [];
+  username: string;
   constructor(private _userService : UserService) 
   {
     // this._userService.getUsers().subscribe(profile => {
@@ -17,23 +18,29 @@ export class UserComponent implements OnInit {
     // });
   }
 
-  //gets called once the component has been initialised
-  ngOnInit() {
+  findRepo(){
+    this._userService.updateUserName(this.username)
+   
     this._userService.getUsers()
-      .subscribe(data => { 
+      .subscribe(data => {
         this.users = data
-  
+     
+
       });
 
-      this._userService.getRepos()
+    this._userService.getRepos()
       .subscribe(repos => {
         this.repos = repos
-        console.log(repos)
+      
       })
     // this._userService.getUsers()
     // .subscribe(profile => {
     //   this.users = prof ile
     // })
+  }
+
+  //gets called once the component has been initialised
+  ngOnInit() {
   }
 
 }
