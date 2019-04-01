@@ -1,27 +1,7 @@
-# PataG
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Github Search
+A website for searching for users based on their github usernames.
+## Authors
+Mugacha Gichamba
+## Description
+Thelanding page of the site has a default github user profile which provides several details including but not limited to : github username, profile picture, bio, email, site urls, followers and followings, company and all the user's github repositories as a list.
+Inorder to get the above details for a different username, they will type the github username and hit enter upon which the details will be displayed
