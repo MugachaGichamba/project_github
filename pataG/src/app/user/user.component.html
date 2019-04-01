@@ -22,7 +22,7 @@
     <div class="col-sm-8" id="repos">
         <h2>Repos</h2>
         <div *ngFor="let repo of repos">
-
+            <h5>{{repo.name}}</h5>
             <p>
                 <a class="btn btn-warning btn-lg" target="_blank" href="{{repo.html_url}}">{{repo.name}} </a>
             </p>
