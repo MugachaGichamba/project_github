@@ -1,6 +1,12 @@
 export interface IUser {
-    id : number,
     login : string,
+    avatar_url: string,
     followers : number,
-    following: number
+    following: number,
+    email :string,
+    bio : string,
+    company : string,
+    hireable : string
+    public_repos: number
+
 }
