@@ -33,14 +33,22 @@ export class UserComponent implements OnInit {
         this.repos = repos
       
       })
-    // this._userService.getUsers()
-    // .subscribe(profile => {
-    //   this.users = prof ile
-    // })
+
   }
 
-  //gets called once the component has been initialised
   ngOnInit() {
+    this._userService.getUsers()
+      .subscribe(data => {
+        this.users = data
+
+
+      });
+
+    this._userService.getRepos()
+      .subscribe(repos => {
+        this.repos = repos
+
+      })
   }
 
 }

@@ -3,23 +3,30 @@
         <input type="text" name="form-control" placeholder="Search github username" [(ngModel)]="username" name="username" (keyup)="findRepo()">
     </div>
 </form>
+<div class="row">
+    <div class="col-sm-4" id="details">
+        <div *ngIf="users">
+            <h1>@{{users.login}}</h1>
+            <img src="{{users.avatar_url}}" alt="profile pic">
+            <a class="btn btn-success btn-sm" target="_blank" href="{{users.html_url}}">Go to {{users.login}}'s github page</a>
+            <h4>Followers: {{users.followers}}</h4>
+            <h4>Following: {{users.following}}</h4>
+            <span *ngIf="users.email">{{users.email}}</span>
+            <h4>Bio</h4>
+            <span *ngIf="users.bio">{{users.bio}}</span>
+            <span *ngIf="users.company">Works at {{users.company}}</span>
+            <span *ngIf="users.hireable">Available for hire: {{users.hireable}}</span>
+            <p *ngIf="users.public_repos">Public repos: {{users.public_repos}}</p>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <h2>Repos</h2>
+        <div *ngFor="let repo of repos">
 
-<div *ngIf="users">
-    <h1>@{{users.login}}</h1>
-    <img src="{{users.avatar_url}}" alt="profile pic">
-    <a class="btn btn-success btn-sm" target="_blank" href="{{users.html_url}}">Go to {{users.login}}'s github page</a>
-    <h3>Followers: {{users.followers}}</h3>
-    <h3>Following: {{users.following}}</h3>
-    <span *ngIf="users.email">{{users.email}}</span>
-    <span *ngIf="users.bio">Works at {{users.bio}}</span>
-    <span *ngIf="users.company">Works at {{users.company}}</span>
-    <span *ngIf="users.hireable">Available for hire: {{users.hireable}}</span>
-    <span *ngIf="users.public_repos">Public repos: {{users.public_repos}}</span>
-</div>
-<h2>Repos</h2>
-<div *ngFor="let repo of repos">
-
-    <p>
-        <a class="btn btn-warning btn-lg" target="_blank" href="{{repo.html_url}}">{{repo.name}} </a>
-    </p>
+            <p>
+                <a class="btn btn-warning btn-lg" target="_blank" href="{{repo.html_url}}">{{repo.name}} </a>
+            </p>
+            <p>{{repo.description}}</p>
+        </div>
+    </div>
 </div>
