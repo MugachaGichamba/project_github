@@ -14,8 +14,8 @@ export class UserService {
     console.log("service ready")
   }
 
-  getUsers(){
-    return this.http.get(this.apiKey);
+  getUsers(): Observable<IUser[]>{
+    return this.http.get<IUser[]>(this.apiKey);
     
   }
 }
