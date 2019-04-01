@@ -9,6 +9,7 @@ import { UserService } from 'services/user.service';
 export class UserComponent implements OnInit {
  
   public users = [];
+  public repos = [];
   constructor(private _userService : UserService) 
   {
     // this._userService.getUsers().subscribe(profile => {
@@ -21,8 +22,14 @@ export class UserComponent implements OnInit {
     this._userService.getUsers()
       .subscribe(data => { 
         this.users = data
-      console.log(data)
+  
       });
+
+      this._userService.getRepos()
+      .subscribe(repos => {
+        this.repos = repos
+        console.log(repos)
+      })
     // this._userService.getUsers()
     // .subscribe(profile => {
     //   this.users = prof ile
