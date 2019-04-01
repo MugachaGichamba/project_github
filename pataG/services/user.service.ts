@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { IUser } from '../src/app/users';
+import { Observable } from 'rxjs/';
+
  
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
-  constructor(private http : HttpClient) { }
+  private apiKey : string = 'https://api.github.com/users/MugachaGichamba?access_token=' + "bf361e1bd02e948e5b8408283d45856edeea1039";
+  constructor(private http : HttpClient) { 
+    console.log("service ready")
+  }
 
   getUsers(){
-    return [{
-      "id" : 1, "name" : "gichamba", "age" : 30
-    }]
+    return this.http.get(this.apiKey);
+    
   }
 }
