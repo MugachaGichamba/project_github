@@ -6,17 +6,17 @@
 <div class="row">
     <div class="col-sm-4" id="details">
         <div *ngIf="users">
-            <h1>@{{users.login}}</h1>
+            <h2>@{{users.login}}</h2>
             <img src="{{users.avatar_url}}" alt="profile pic">
             <a class="btn btn-success btn-sm" target="_blank" href="{{users.html_url}}">Go to {{users.login}}'s github page</a>
             <h4>Followers: {{users.followers}}</h4>
             <h4>Following: {{users.following}}</h4>
             <h4 *ngIf="users.email">{{users.email}}</h4>
-            <h4>Bio</h4>
-            <h3 *ngIf="users.bio">{{users.bio}}</h3>
+            <h3>Bio</h3>
+            <h4 *ngIf="users.bio">{{users.bio}}</h4>
             <h4 *ngIf="users.company">Works at {{users.company}}</h4>
             <h4 *ngIf="users.hireable">Available for hire: {{users.hireable}}</h4>
-            <p *ngIf="users.public_repos">Public repos: {{users.public_repos}}</p>
+            <h4 *ngIf="users.public_repos">Public repos: {{users.public_repos}}</h4>
         </div>
     </div>
     <div class="col-sm-8" id="repos">
