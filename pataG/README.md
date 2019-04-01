@@ -24,3 +24,6 @@ Inorder to get the above details for a different username, they will type the gi
 4. Type git clone then paste the link you copied from github and press enter.
 5. A new subdirectory will appear in your current folder.
 6. Open the folder with your favourite code editor.
+## Contact
+#### Phone: 0705684752
+#### Email: mugachadjango@gmail.com
