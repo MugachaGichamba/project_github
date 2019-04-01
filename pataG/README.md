@@ -12,3 +12,8 @@ Inorder to get the above details for a different username, they will type the gi
    -jquery
 4. Typescript
     -Angular
+## Dependencies
+1. Bootstrap CDN
+2. JQuery CDN
+3. Javascript CDN
+4. FormsModule
