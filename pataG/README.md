@@ -27,3 +27,5 @@ Inorder to get the above details for a different username, they will type the gi
 ## Contact
 #### Phone: 0705684752
 #### Email: mugachadjango@gmail.com
+## License
+#### This project is licensed under the MIT License - see the LICENSE.md file for details
