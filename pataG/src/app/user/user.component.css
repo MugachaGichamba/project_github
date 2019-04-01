@@ -7,3 +7,17 @@ img {
 #details {
     text-align: center;
 }
+
+a {
+    margin: 10px;
+}
+
+#repos {
+    text-align: center;
+}
+
+input {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+}

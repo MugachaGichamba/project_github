@@ -1,6 +1,6 @@
 <form action="">
     <div class="form-group">
-        <input type="text" name="form-control" placeholder="Search github username" [(ngModel)]="username" name="username" (keyup)="findRepo()">
+        <input id="input" type="text" name="form-control" placeholder="Search github username" [(ngModel)]="username" name="username" (keyup)="findRepo()">
     </div>
 </form>
 <div class="row">
@@ -11,15 +11,15 @@
             <a class="btn btn-success btn-sm" target="_blank" href="{{users.html_url}}">Go to {{users.login}}'s github page</a>
             <h4>Followers: {{users.followers}}</h4>
             <h4>Following: {{users.following}}</h4>
-            <span *ngIf="users.email">{{users.email}}</span>
+            <h4 *ngIf="users.email">{{users.email}}</h4>
             <h4>Bio</h4>
-            <span *ngIf="users.bio">{{users.bio}}</span>
-            <span *ngIf="users.company">Works at {{users.company}}</span>
-            <span *ngIf="users.hireable">Available for hire: {{users.hireable}}</span>
+            <h3 *ngIf="users.bio">{{users.bio}}</h3>
+            <h4 *ngIf="users.company">Works at {{users.company}}</h4>
+            <h4 *ngIf="users.hireable">Available for hire: {{users.hireable}}</h4>
             <p *ngIf="users.public_repos">Public repos: {{users.public_repos}}</p>
         </div>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8" id="repos">
         <h2>Repos</h2>
         <div *ngFor="let repo of repos">
 
